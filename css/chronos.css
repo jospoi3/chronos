@@ -1,0 +1,1826 @@
+/* ----------------------------------------------------------------
+// Module: Chronos CSS
+// Description: Styles du prototype
+// Auteur: Thundra
+// Version: 1.0.0
+// Dernière modification: juin 2015
+// ---------------------------------------------------------------- */
+
+/* = CSS Reset
+-------------------------------------------------------------- */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {margin: 0;}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+    outline: 0;
+    color: #006464;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    color: #317390;
+}
+
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+
+mark {
+    color: #000;
+    background: #ff0;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    vertical-align: baseline;
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace,monospace;
+    font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+    border: 1px solid #c0c0c0;
+}
+
+legend {
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  box-sizing: content-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Arial";
+  color: #000;
+  background-color: #fff;
+}
+
+img,
+svg,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+hr {
+  margin: 2em 0;
+  border-top: 0;
+  border-bottom: 1px solid #ccc;
+}
+hr.is-hidden {
+  display: block;
+  border-bottom-color: transparent;
+}
+
+ul,
+ol {
+  padding-left: 12px;
+  list-style-position: inside;
+}
+ul li + li,
+ol li + li {
+  margin-top: 5px;
+}
+
+ol {
+  margin-left: 0;
+  padding-right: 0;
+  list-style-type: none;
+}
+ol li {
+  counter-increment: step-counter;
+}
+ol li:before {
+  content: "[" counter(step-counter) "] ";
+}
+
+::selection,
+::-moz-selection {
+  color: #fff;
+  background: #000;
+  text-shadow: none;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.svg-fallback {
+  display: none;
+}
+.no-svg .svg-fallback {
+  display: inline;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+.no-svg .icon-wrapper {
+  display: inline;
+}
+
+.iframe-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-wrapper.is-locked iframe {
+  pointer-events: none;
+}
+
+/*
+.table {
+  display: table;
+  width: 100%;
+}
+*/
+/* Table layouts */
+	.table										{ display: table; width:100%; table-layout: fixed; }
+	.row										{ display: table-row; height: 1px; }
+	.cell										{ display: table-cell; vertical-align: middle; position: relative; }
+	.expand										{ height: auto; }
+	.align-top									{ vertical-align: top; }
+	.align-middle								{ vertical-align: middle; }
+	.align-bottom								{ vertical-align: bottom; }
+	
+	.table.hcenter:before,
+	.table.hcenter:after						{ content: ""; display: table-row; height: auto; } 
+
+@media (max-width: 767px) { .table {font-size: 0.75em;} }
+
+.tr {
+  display: table-row;
+}
+
+.th {
+  display: table-cell;
+}
+
+.td {
+  display: table-cell;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.is-text-align-left {
+  text-align: left;
+}
+
+.is-text-align-right {
+  text-align: right;
+}
+
+.is-text-align-center {
+  text-align: center;
+}
+
+.is-bold {
+  font-weight: bold;
+}
+
+.is-italic {
+  font-style: italic;
+}
+
+.is-underline {
+  text-decoration: underline;
+}
+
+.ui-resizable-handle {
+  display: block;
+  position: absolute;
+  font-size: 0.1px;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+
+.ui-resizable-n {
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  cursor: n-resize;
+}
+
+.ui-resizable-s {
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  cursor: s-resize;
+}
+
+.ui-resizable-e {
+  top: 0;
+  right: -5px;
+  width: 7px;
+  height: 100%;
+  cursor: e-resize;
+}
+
+.ui-resizable-w {
+  top: 0;
+  left: -5px;
+  width: 7px;
+  height: 100%;
+  cursor: w-resize;
+}
+
+.ui-resizable-se {
+  right: 1px;
+  bottom: 1px;
+  width: 12px;
+  height: 12px;
+  cursor: se-resize;
+}
+
+.ui-resizable-sw {
+  bottom: -5px;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  cursor: sw-resize;
+}
+
+.ui-resizable-nw {
+  top: -5px;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  cursor: nw-resize;
+}
+
+.ui-resizable-ne {
+  top: -5px;
+  right: -5px;
+  width: 9px;
+  height: 9px;
+  cursor: ne-resize;
+}
+
+.skip-content-link {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.skip-content-link:focus {
+  overflow: visible;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 6px;
+  padding: 4px 6px;
+}
+
+:focus {
+  outline: none;
+}
+
+a:focus:not(.is-hover):not(.is-clicked),
+input:focus:not(.is-hover):not(.is-clicked),
+button:focus:not(.is-hover):not(.is-clicked) {
+  display: inline-block;
+  /*box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000, 0 0 0 6px #fff;*/
+}
+
+/*:first-child {margin-top: 0;}*/
+
+:last-child {
+  margin-bottom: 0;
+}
+
+.td,
+.th {
+  padding: 6px 12px;
+  text-align: center;
+}
+.td:first-child,
+.th:first-child {
+  text-align: left;
+}
+
+.th {
+  background-color: #ddd;
+}
+
+.th:first-child {
+  background-color: #fff;
+}
+
+.tr:nth-child(1n) {
+  background-color: #fafafa;
+}
+
+.tr:nth-child(2n) {
+  background-color: #efefef;
+}
+
+/* = General Styles
+-------------------------------------------------------------- */
+body, html {
+   	 height:  100%;
+   	 margin:  0px auto;
+   	 padding: 0px auto;
+   	 font-size: 90%;
+}
+#site-wrapper {
+ 	height: auto;
+ 	min-height: 100%;
+ 	max-width:996px;
+ 	margin: 0px auto;
+ 	padding: 0px auto;
+	position: relative;
+	font-size: 1rem;
+	overflow: hidden;
+}
+header {
+	height:50px;
+	position: absolute;
+	top: -4px; 
+	width: 100%;
+	max-width: 996px;
+	padding:0px;
+	background-color: #fff; 
+	z-index: 9;
+	border-bottom:1px solid #e3e3e3;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+main {padding-bottom:48px;}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	height:24px;
+	width: 100%;
+	border-top: 1px solid #f1f1f1;
+	padding:6px;
+	padding-bottom: 24px;
+	background-color: #fff;
+	font-size:0.675em;
+	text-align: center;
+}
+
+.wrapper {padding-left: 24px;padding-right: 24px;}
+
+.timeline-btn, .navL1, .navL2 {cursor: pointer}
+
+/* = Navigation L1
+-------------------------------------------------------------- */
+nav {float: left;display: inline-block;}
+nav ul.navL1 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+nav ul.navL1 li {
+	display: inline-block;
+	height:45px;
+	padding: 6px 12px;
+	line-height: 36px;
+	font-size: 1rem;
+	color: #006464;
+	font-weight: bold;
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+nav ul.navL1 li.active {
+	border: 1px solid #3e7e95;
+	background: #3e7e95; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cce1e4 0%, #3e7e95 13%, #3f7f95 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cce1e4), color-stop(13%,#3e7e95), color-stop(100%,#3f7f95)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cce1e4', endColorstr='#3f7f95',GradientType=0 ); /* IE6-9 */
+}
+nav ul.navL1 li a{text-decoration: none}
+nav ul.navL1 li.active a{color: #fff;}
+
+/* = L2 Nav - menu btns inside content-container
+-------------------------------------------------------------- */
+.navL2 {
+	position:absolute;
+	display:block;
+	top: -2px;
+	height: 45px;
+	padding: 6px 12px;
+	line-height: 36px;
+	margin-bottom: 0px;
+	background-color: #fff;
+	border: 1px solid #288d92;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+
+/* colors *//* #1cb1cf, #9caa25, #4b4b4b, #cf19ae, #fd7121, #4fa921, #a91d16, #e38f29, #6b1ba8 */
+/* Pre-colonial Africa */
+.pre-colonial-africa .navL2 {border: 1px solid #1cb1cf;}
+.pre-colonial-africa .navL2.active {
+	color: #fff;
+	background-color: #1cb1cf;
+	background: -moz-linear-gradient(top,  #fff 0%, #1cb1cf 13%, #1cb1cf 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#1cb1cf), color-stop(100%,#1cb1cf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#1cb1cf 13%,#1cb1cf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#1cb1cf 13%,#1cb1cf 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#1cb1cf 13%,#1cb1cf 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#1cb1cf 13%,#1cb1cf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#1cb1cf',GradientType=0 ); 
+}
+.pre-colonial-africa a {color: #1cb1cf;}
+.pre-colonial-africa .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #1cb1cf;margin-right: 12px;}
+#trans-saharan-slave-trade-1 {left:0px;}
+#historical-context-1 {left:164px;}
+.sitemap-link[rel='pre-colonial-africa'] {color: #1cb1cf }
+
+/* Transatlantic Slave Trade */
+.transatlantic-slave-trade .navL2 {border: 1px solid #9caa25;}
+.transatlantic-slave-trade .navL2.active {
+	color: #fff;
+	background-color: #9caa25;
+	background: -moz-linear-gradient(top,  #fff 0%, #9caa25 13%, #9caa25 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cce1e4), color-stop(13%,#9caa25), color-stop(100%,#9caa25)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#9caa25 13%,#9caa25 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#9caa25 13%,#9caa25 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#9caa25 13%,#9caa25 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#9caa25 13%,#9caa25 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#9caa25',GradientType=0 ); 
+}
+.transatlantic-slave-trade a {color: #9caa25;}
+.transatlantic-slave-trade .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #9caa25;margin-right: 12px;}
+#historical-context-2 {left:0px;}
+.sitemap-link[rel='transatlantic-slave-trade'] {color: #9caa25 }
+
+/* Antebellum Era */
+.antebellum-era .navL2 {border: 1px solid #4b4b4b;}
+.antebellum-era .navL2.active {
+	color: #fff;
+	background-color: #4b4b4b;
+	background: -moz-linear-gradient(top,  #fff 0%, #4b4b4b 13%, #4b4b4b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#4b4b4b), color-stop(100%,#4b4b4b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#4b4b4b 13%,#4b4b4b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#4b4b4b 13%,#4b4b4b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#4b4b4b 13%,#4b4b4b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#4b4b4b 13%,#4b4b4b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#4b4b4b',GradientType=0 );
+}
+.antebellum-era a {color: #4b4b4b;}
+.antebellum-era .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #4b4b4b;margin-right: 12px;}
+#life-as-a-slave-3 {left:0px;}
+#works-3 {left:96px;}
+#people-3 {left:153px;}
+#historical-context-3 {left:213px;}
+.sitemap-link[rel='antebellum-era'] {color: #4b4b4b }
+
+/* Reconstruction Period */
+.reconstruction-period .navL2 {border: 1px solid #cf19ae;}
+.reconstruction-period .navL2.active {
+	color: #fff;
+	background-color: #4b4b4b;
+	background: -moz-linear-gradient(top,  #fff 0%, #cf19ae 13%, #cf19ae 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#cf19ae), color-stop(100%,#cf19ae)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#cf19ae 13%,#cf19ae 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#cf19ae 13%,#cf19ae 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#cf19ae 13%,#cf19ae 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#cf19ae 13%,#cf19ae 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#cf19ae',GradientType=0 );
+}
+.reconstruction-period a {color: #cf19ae;}
+.reconstruction-period .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #cf19ae;margin-right: 12px;}
+#challenges-4 {left:0px;}
+#works-4 {left:82px;}
+#people-4 {left:139px;}
+#historical-context-4 {left:199px;}
+.sitemap-link[rel='reconstruction-period'] {color: #cf19ae }
+
+/* New Negro Renaissance */
+.new-negro-renaissance .navL2 {border: 1px solid #fd7121;}
+.new-negro-renaissance .navL2.active {
+	color: #fff;
+	background-color: #fd7121;
+	background: -moz-linear-gradient(top,  #fff 0%, #fd7121 13%, #fd7121 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#fd7121), color-stop(100%,#fd7121)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#fd7121 13%,#fd7121 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#fd7121 13%,#fd7121 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#fd7121 13%,#fd7121 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#fd7121 13%,#fd7121 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fd7121',GradientType=0 );
+}
+.new-negro-renaissance a {color: #fd7121;}
+.new-negro-renaissance .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #fd7121;margin-right: 12px;}
+#works-5 {left:0px;}
+#people-5 {left:57px;}
+#historical-context-5 {left:117px;}
+.sitemap-link[rel='new-negro-renaissance'] {color: #fd7121 }
+
+/* Harlem Renaissance */
+.harlem-renaissance .navL2 {border: 1px solid #4fa921;}
+.harlem-renaissance .navL2.active {
+	color: #fff;
+	background-color: #4fa921;
+	background: -moz-linear-gradient(top,  #fff 0%, #4fa921 13%, #4fa921 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#4fa921), color-stop(100%,#4fa921)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#4fa921 13%,#4fa921 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#4fa921 13%,#4fa921 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#4fa921 13%,#4fa921 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#4fa921 13%,#4fa921 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#4fa921',GradientType=0 );
+}
+.harlem-renaissance a {color: #4fa921;}
+.harlem-renaissance .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #4fa921;margin-right: 12px;}
+#challenges-6 {left:0px;}
+#works-6 {left:82px;}
+#people-6 {left:139px;}
+#historical-context-6 {left:199px;}
+.sitemap-link[rel='harlem-renaissance'] {color: #4fa921 }
+
+/* Civil Rights Movement */
+.civil-rights-movement .navL2 {border: 1px solid #a91d16;}
+.civil-rights-movement .navL2.active {
+	color: #fff;
+	background-color: #a91d16;
+	background: -moz-linear-gradient(top,  #fff 0%, #a91d16 13%, #a91d16 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#a91d16), color-stop(100%,#a91d16)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#a91d16 13%,#a91d16 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#a91d16 13%,#a91d16 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#a91d16 13%,#a91d16 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#a91d16 13%,#a91d16 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#a91d16',GradientType=0 );
+}
+.civil-rights-movement a {color: #a91d16;}
+.civil-rights-movement .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #a91d16;margin-right: 12px;}
+#challenges-7 {left:0px;}
+#works-7 {left:82px;}
+#people-7 {left:139px;}
+#historical-context-7 {left:199px;}
+.sitemap-link[rel='civil-rights-movement'] {color: #a91d16 }
+
+/* Black Arts Era */
+.black-arts-era .navL2 {border: 1px solid #e38f29;}
+.black-arts-era .navL2.active {
+	color: #fff;
+	background-color: #e38f29;
+	background: -moz-linear-gradient(top,  #fff 0%, #e38f29 13%, #e38f29 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#e38f29), color-stop(100%,#e38f29)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#e38f29 13%,#e38f29 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#e38f29 13%,#e38f29 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#e38f29 13%,#e38f29 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#e38f29 13%,#e38f29 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e38f29',GradientType=0 );
+}
+.black-arts-era a {color: #e38f29;}
+.black-arts-era .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #e38f29;margin-right: 12px;}
+#works-8 {left:0px;}
+#people-8 {left:58px;}
+#historical-context-8 {left:118px;}
+.sitemap-link[rel='black-arts-era'] {color: #e38f29 }
+
+/* Contemporary Period */
+.contemporary-period .navL2 {border: 1px solid #6b1ba8;}
+.contemporary-period .navL2.active {
+	color: #fff;
+	background-color: #6b1ba8;
+	background: -moz-linear-gradient(top,  #fff 0%, #6b1ba8 13%, #6b1ba8 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(13%,#6b1ba8), color-stop(100%,#6b1ba8)); 
+	background: -webkit-linear-gradient(top,  #fff 0%,#6b1ba8 13%,#6b1ba8 100%);
+	background: -o-linear-gradient(top,  #fff 0%,#6b1ba8 13%,#6b1ba8 100%); 
+	background: -ms-linear-gradient(top,  #fff 0%,#6b1ba8 13%,#6b1ba8 100%);
+	background: linear-gradient(to bottom,  #fff 0%,#6b1ba8 13%,#6b1ba8 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#6b1ba8',GradientType=0 );
+}
+.contemporary-period a {color: #6b1ba8;}
+.contemporary-period .content-sub-title:before {content: "";display: inline-block; width:18px;height:18px;background-color: #6b1ba8;margin-right: 12px;}
+#challenges-9 {left: 0px;}
+#works-9 {left:82px;}
+#people-9 {left:139px;}
+#historical-context-9 {left:199px;}
+.sitemap-link[rel='contemporary-period'] {color: #6b1ba8 }
+
+/* = Content divs position (under header div)
+-------------------------------------------------------------- */
+#introduction, #sitemap {margin-top: 80px;}
+#sitemap {border:0px solid #f00;}
+#sitemap ul {
+	list-style-type: none;
+	font-size:115%;
+	text-align: center;
+	line-height:1.375em;
+}
+#sitemap ul li {width: 100%;text-align: left;padding:3px;}
+#sitemap ul li a {font-size: 120%;}
+#sitemap ul li ul li {width: 100%;margin-left: 0px;}
+#sitemap ul li ul li a {font-size: 110%;}
+#sitemap ul li ul li ul li {
+	border:0;
+	list-style-type: none;
+	padding:0px;
+	padding-left: 6px;
+	font-size: 0.75em !important;
+	line-height: 1em !important;
+}
+
+/* = Timelines
+-------------------------------------------------------------- */
+#timeline-container {
+	position: absolute !important;
+	top: 46px;
+	width: 100%;
+	max-width:996px;
+	height: 266px;
+	background-color: #fff; 
+	z-index: 10;
+	overflow: hidden;
+	margin: 0 0;
+	padding: 0;
+	padding-top: 24px;
+	padding-bottom: 6px;
+	font-size: 0;
+	border-bottom:1px solid #e3e3e3;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+	/* css gradient background */
+    background: #e7e7e7; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #e7e7e7 1%, #ffffff 15%, #ffffff 50%, #ffffff 85%, #e7e7e7 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(10,#e7e7e7), color-stop(15%,#ffffff), color-stop(50%,#ffffff), color-stop(85%,#ffffff), color-stop(99%,#e7e7e7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #e7e7e7 1%, #ffffff 15%, #ffffff 50%, #ffffff 85%, #e7e7e7 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #e7e7e7 1%, #ffffff 15%, #ffffff 50%, #ffffff 85%, #e7e7e7 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #e7e7e7 1%, #ffffff 15%, #ffffff 50%, #ffffff 85%, #e7e7e7 99%); /* IE10+ */
+	background: linear-gradient(-45deg,  #e7e7e7 1%, #ffffff 15%, #ffffff 50%, #ffffff 85%, #e7e7e7 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#ffffff',GradientType=1 ); 
+	/* IE6-9 fallback on horizontal gradient */
+}
+.container {
+	height: 100%;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.timeline-zone {height: 5px;display: inline-block;}
+.start_year, .end_year {
+	position: absolute;
+	top: 190px;
+	width: 30px;
+	height: 12px;
+	padding:0;
+	margin:0;
+	color: #806c1c;
+	z-index:1111;
+	font-size:12px;
+}
+.start_year {left: 6px;}
+.end_year {right:12px;}
+
+#historical-timeline-title {
+	position: absolute;
+	top: 110px;
+	left: 12px;;
+	width: 100px;
+	height: 15px;
+	padding:0;
+	margin:0;
+	color: #333;
+	z-index:1112;
+	font-size: 12px;
+}
+#historical-timeline-wrapper {
+	position: relative;
+	top: 100px;
+	width: 100%;
+	height: 5px;
+	background-color: #00b1d1;
+	z-index:1002;
+}
+
+#htl-zone1 {width:15%;background-color: #1cb1cf;}
+#htl-zone2 {width:18%;background-color: #9caa25;}
+#htl-zone3 {width:38%;background-color: #4b4b4b;}
+#htl-zone4 {width:2%;background-color: #cf19ae;}
+#htl-zone5 {width:6.5%;background-color: #fd7121;}
+#htl-zone6 {width:4%;background-color: #4fa921;}
+#htl-zone7 {width:3%;background-color: #a91d16;}
+#htl-zone8 {width:2%;background-color: #e38f29;}
+#htl-zone9 {width:11.5%;background-color: #6b1ba8;}
+
+#literary-timeline-title {
+	position: absolute;
+	top: 145px;
+	left: 12px;;
+	width: 120px;
+	height: 15px;
+	padding:0;
+	margin:0;
+	color: #333;
+	z-index:1113;
+	font-size: 12px;
+}
+#literary-timeline-wrapper {
+	position: relative;
+	top: 110px;
+	width: 100%;
+	height: 5px;
+	background-color: #514545;
+	border-top: 1px solid #514545;
+	z-index:1001;
+	opacity: 0.55;
+}
+#literary-timeline-wrapper:hover {opacity: 1;}
+#ltl-zone1 {width:66%;background-color: #cdd3b9;}
+#ltl-zone2 {width:5.5%;background-color: #cfc2c9;}
+#ltl-zone3 {width:5.5%;background-color: #e3d5ae;}
+#ltl-zone4 {width:9%;background-color: #c5cbcb;}
+#ltl-zone5 {width:14%;background-color: #dcbcc1;}
+
+.timeline-btn {
+	position:relative;
+	background-image: url(../img/timeline-bg.png);
+	background-repeat: repeat-y;
+	background-position: center 0;
+	background-color: transparent;
+	float: left;
+	padding: 0px;
+	margin-top:0px;
+	max-height:50px;
+	font-size: 0.75rem;
+	border: 0;
+}
+.timeline-btn .inner-btn {
+	position:absolute;
+	left: 0;
+	text-align: center;
+	padding:3px;
+	display: block;
+	background-color: #f1f1f1;
+	width: 100%;
+	min-width:150px;
+	max-width:200px;
+}
+.timeline-btn:last-child {padding-right: 3px;}
+.timeline-btn span {padding:0;display: block;background-color: transparent;}
+
+/* colors *//* #1cb1cf, #9caa25, #cf19ae, #4b4b4b, #4fa921, #fd7121, #a91d16, #bfbfbf, #6b1ba8 */
+/* specific timeline btn CSS */
+.timeline-btn[rel='pre-colonial-africa'] {top: 0px;min-height:90px;width:15%;}
+.timeline-btn[rel='pre-colonial-africa'] .inner-btn {top: 0px;border: 1px solid #1cb1cf;border-left: 5px solid #1cb1cf;}
+.timeline-btn[rel='pre-colonial-africa'] .inner-btn.active {background-color: #1cb1cf;color: #fff;}
+
+.timeline-btn[rel='transatlantic-slave-trade'] {top: 95px;min-height:70px;width:18%;}
+.timeline-btn[rel='transatlantic-slave-trade'] .inner-btn {top: 65px;border: 1px solid #9caa25;border-left: 5px solid #9caa25;}
+.timeline-btn[rel='transatlantic-slave-trade'] .inner-btn.active {background-color: #9caa25;color: #fff;}
+
+.timeline-btn[rel='antebellum-era'] {top: 0px;min-height:90px;width:38%;}
+.timeline-btn[rel='antebellum-era'] .inner-btn {top: 0px;margin-left: 30%;width:25%;border: 1px solid #4b4b4b;border-left: 5px solid #4b4b4b;}
+.timeline-btn[rel='antebellum-era'] .inner-btn.active {background-color: #4b4b4b;color: #fff;}
+
+.timeline-btn[rel='reconstruction-period'] {top: 95px;min-height:100px;width:2%}
+.timeline-btn[rel='reconstruction-period'] .inner-btn {top: 93px;margin-left:-320%;border: 1px solid #cf19ae;border-left: 5px solid #cf19ae;}
+.timeline-btn[rel='reconstruction-period'] .inner-btn.active {background-color: #cf19ae;color: #fff;}
+
+.timeline-btn[rel='new-negro-renaissance'] {top: 27px;min-height:63px;width:6.5%}
+.timeline-btn[rel='new-negro-renaissance'] .inner-btn {top: -20px;margin-left:-100%;width: 170px;z-index:10001;border: 1px solid #fd7121;border-left: 5px solid #fd7121;}
+.timeline-btn[rel='new-negro-renaissance'] .inner-btn.active {background-color: #fd7121;color: #fff;}
+
+.timeline-btn[rel='harlem-renaissance'] {top: 95px;min-height:56px;width:4%; }
+.timeline-btn[rel='harlem-renaissance'] .inner-btn {top: 56px;margin-left:-140%;border: 1px solid #4fa921;border-left: 5px solid #4fa921;}
+.timeline-btn[rel='harlem-renaissance'] .inner-btn.active {background-color: #4fa921;color: #fff;}
+
+.timeline-btn[rel='civil-rights-movement'] {top: -20px;min-height:110px;width:3%;z-index:3;background-position: 25% 0;}
+.timeline-btn[rel='civil-rights-movement'] .inner-btn {top: -10px;margin-left:-220%;border: 1px solid #a91d16;border-left: 5px solid #a91d16;}
+.timeline-btn[rel='civil-rights-movement'] .inner-btn.active {background-color: #a91d16;color: #fff;}
+
+.timeline-btn[rel='black-arts-era'] {top: 95px;min-height:30px;width:2%;}
+.timeline-btn[rel='black-arts-era'] .inner-btn {top: 19px;margin-left: -180%;border: 1px solid #e38f29;border-left: 5px solid #e38f29;}
+.timeline-btn[rel='black-arts-era'] .inner-btn.active {background-color: #e38f29;color: #fff;}
+
+.timeline-btn[rel='contemporary-period'] {top: 45px;min-height:45px;width: 11.5%;}
+.timeline-btn[rel='contemporary-period'] .inner-btn {top: 0px;margin-left:-32%;z-index:10000;border: 1px solid #6b1ba8;border-left: 5px solid #6b1ba8;}
+.timeline-btn[rel='contemporary-period'] .inner-btn.active {background-color: #6b1ba8;color: #fff;}
+
+/* = Content CSS
+-------------------------------------------------------------- */
+#content-container {
+	padding-bottom: 24px;
+	margin-top: 312px;
+	z-index: 0;
+}
+.main-content {position: relative;font-size:1em;}
+.mobile-content .navL2 {display: none;}
+.mobile-content .content-section-wrapper {display: none;}
+
+.content-section-wrapper {
+	position: relative;
+	top: 47px;
+	padding-bottom: 24px;
+	padding-top: 12px;
+	border-left: 0;
+	border-right: 0;
+}
+
+.content-section-wrapper ul:before {
+	display: block;
+	margin-left: -12px;
+	height: 24px;
+	content: 'For more information';
+}
+
+h2.content-sub-title {margin-bottom: 0px}
+.content-sub-title-period {font-size: 0.75em;padding-left: 32px;padding-bottom: 12px;}
+
+/* Breadcrumbbs & pagination */
+.breadcrumb {
+	display: none;
+	position: relative;
+	top: 0;
+	font-size: 0.875em;
+	padding:6px;
+	margin-bottom: 12px;
+	border-bottom:1px solid #e3e3e3;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #666;
+}
+
+.crumbspan {font-size: 0.6875em;}
+
+.pagination {float:right;padding-right: 6px;}
+.pagination .pagination-link {font-size:1.25em;margin-right:6px;}
+.pagination a.active {text-decoration:none;color: #555;}
+
+/* introduction image container */
+.intro-image-container {float:left;	width: 400px;}
+.intro-image-container img {min-width: 376px;}
+.intro-image-container.left {float:left;padding-right: 24px;}
+.intro-image-container.right {float:right;padding-left: 24px;}
+
+/* cadre a toutes les images */
+.content-wrapper img {border:1px solid #b4b6ba}
+
+/* images container in content */
+.content-image-container {float:left; padding-top: 12px;}
+.content-image-container.left {float:left;margin-right:24px;}
+.content-image-container.right {float:right;margin-left:24px;margin-right: 2px;}
+
+/* text container in content */
+.content-text-container {/* font-size: 1em; */}
+.content-text-container.left {padding-right: 0px;}
+.content-text-container.right {padding-left: 0px;}
+
+/* images containers for each page */
+/* Pre-colonial Africa */
+#sub-content-1 .content-image-container {max-width: 30%;padding-bottom: 48px;}
+#sub-content-1 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-2 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-2 .content-image-thumb {width: 100%;max-width:400px;}
+#sub-content-2 .in-content-image-container {max-width:264px;float: right;padding-bottom:48px;padding-left:12px;}
+
+#sub-content-3 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-3 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-4 .content-image-container {max-width: 60%;padding-bottom: 12px;}
+#sub-content-4 .content-image-thumb {width: 100%;max-width:500px;}
+#sub-content-4 .in-content-image-container {max-width:240px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+#sub-content-5 .content-image-container {max-width: 45%;padding-bottom: 12px;}
+#sub-content-5 .content-image-thumb {width: 100%;max-width:450px;}
+#sub-content-5 .in-content-image-container {max-width:240px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+/* Transatlantics Slave Trade */
+#sub-content-21 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-21 .content-image-thumb {width: 100%;max-width:220px;}
+
+#sub-content-22 .content-image-container {max-width: 55%;padding-bottom: 24px;}
+#sub-content-22 .content-image-thumb {width: 100%;max-width:550px;}
+#sub-content-22 .in-content-image-container {max-width:350px;float: right;padding-right:6px;padding-bottom:48px;padding-left:12px;}
+
+#sub-content-23 .content-image-container {max-width: 55%;padding-bottom: 24px;}
+#sub-content-23 .content-image-thumb {width: 100%;max-width:550px;}
+
+#sub-content-24 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-24 .content-image-thumb {width: 100%;max-width:400px;}
+#sub-content-24 .in-content-image-container {max-width:400px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+/* Antebellum Era */
+#sub-content-311 .content-image-container {max-width: 20%;padding-bottom: 48px;}
+#sub-content-311 .content-image-thumb {width: 100%;max-width:220px;}
+
+#sub-content-312 .content-image-container {max-width: 32%;padding-bottom: 12px;}
+#sub-content-312 .content-image-thumb {width: 100%;max-width:320px;}
+#sub-content-312 .in-content-image-container {max-width:240px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+#sub-content-313 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-313 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-314 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-314 .content-image-thumb {width: 100%;max-width:300px;}
+#sub-content-314 .in-content-image-container {max-width:240px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+#sub-content-315 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-315 .content-image-thumb {width: 100%;max-width:300px;}
+#sub-content-315 .in-content-image-container {max-width:240px;float: right;padding-right:6px;padding-bottom:12px;padding-left:12px;}
+
+#sub-content-316 .content-image-container {max-width: 18%;padding-bottom: 48px;}
+#sub-content-316 .content-image-thumb {width: 100%;max-width:180px;}
+
+#sub-content-321 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-321 .content-image-thumb {width: 100%;max-width:400px;}
+#sub-content-321 audio {max-width: 300px;}
+
+#sub-content-322 .content-image-container {max-width: 25%;padding-bottom: 12px;padding-top:0;}
+#sub-content-322 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-323 .content-image-container {max-width: 50%;padding-bottom: 48px;padding-top:0;}
+#sub-content-323 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-324 .content-image-container {max-width: 70%;padding-bottom: 48px;padding-top:0;}
+#sub-content-324 .content-image-thumb {width: 100%;max-width:700px;}
+
+#sub-content-331 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-331 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-332 .content-image-container {max-width: 30%;padding-bottom: 12px;padding-top:0;}
+#sub-content-332 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-333 .content-image-container {max-width: 30%;padding-bottom: 12px;padding-top:0;}
+#sub-content-333 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-334 .content-image-container {max-width: 25%;padding-bottom: 12px;padding-top:0;}
+#sub-content-334 .content-image-thumb {width: 100%;max-width:250px;}
+
+
+#sub-content-341 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-341 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-342 .content-image-container {max-width: 35%;padding-bottom: 48px;padding-top:0;}
+#sub-content-342 .content-image-thumb {width: 100%;max-width:350px;}
+
+#sub-content-343 .content-image-container {max-width: 50%;padding-bottom: 12px;padding-top:0;}
+#sub-content-343 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-344 .content-image-container {max-width:  40%;padding-bottom: 12px;padding-top:0;}
+#sub-content-344 .content-image-thumb {width: 100%;max-width:400px;}
+
+/* Reconstruction Period */
+#sub-content-411 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-411 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-412 .content-image-container {max-width: 32%;padding-bottom: 12px;}
+#sub-content-412 .content-image-thumb {width: 100%;max-width:320px;}
+
+#sub-content-413 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-413 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-421 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-421 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-422 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-422 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-423 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-423 .content-image-thumb {width: 100%;max-width:330px;}
+#sub-content-423 audio {max-width: 300px;}
+
+#sub-content-424 .content-image-container {max-width: 60%;padding-bottom: 48px;}
+#sub-content-424 .content-image-thumb {width: 100%;max-width:600px;}
+
+#sub-content-431 .content-image-container {max-width: 30%;padding-bottom: 24px;}
+#sub-content-431 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-432 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-432 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-433 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-433 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-441 .content-image-container {max-width: 50%;padding-bottom: 48px;}
+#sub-content-441 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-442 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-442 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-443 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-443 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-444 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-444 .content-image-thumb {width: 100%;max-width:400px;}
+
+/* New Negro Renaissance */
+#sub-content-511 .content-image-container {max-width: 60%;padding-bottom: 12px;}
+#sub-content-511 .content-image-thumb {width: 100%;max-width:600px;}
+
+#sub-content-512 .content-image-container {max-width: 60%;padding-bottom: 12px;}
+#sub-content-512 .content-image-thumb {width: 100%;max-width:600px;}
+
+#sub-content-521 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-521 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-522 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-522 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-523 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-523 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-524 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-524 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-525 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-525 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-531 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-531 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-532 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-532 .content-image-thumb {width: 100%;max-width:250px;}
+#sub-content-532 .in-content-image-container{max-width:300px;float: right;padding-right:6px;padding-left:12px;}
+
+#sub-content-533 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-533 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-534 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-534 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-535 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-535 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-536 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-536 .content-image-thumb {width: 100%;max-width:500px;}
+
+/* Harlem Renaissance */
+#sub-content-611 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-611 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-612 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-612 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-613 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-613 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-621 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-621 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-622 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-622 .content-image-thumb {width: 100%;max-width:400px;}
+/* formatting to 2 cols */
+#sub-content-622 .col1 {max-width: 30%; display: inline-block; position: relative; top : -24px;}
+#sub-content-622 .col2 {max-width: 30%; display: inline-block; position: relative; left: 24px;}
+
+#sub-content-623 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-623 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-624 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-624 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-631 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-631 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-632 .content-image-container {max-width: 15%;padding-bottom: 12px;}
+#sub-content-632 .content-image-thumb {width: 100%;max-width:150px;}
+/* #sub-content-632 .in-content-image-container{max-width:300px;float: right;padding-right:6px;padding-left:12px;} */
+
+#sub-content-641 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-641 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-642 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-642 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-643 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-643 .content-image-thumb {width: 100%;max-width:330px;}
+
+/* Civil Rights Movement */
+#sub-content-711 .content-image-container {max-width: 35%;padding-bottom: 12px;}
+#sub-content-711 .content-image-thumb {width: 100%;max-width:350px;}
+
+#sub-content-712 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-712 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-713 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-713 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-721 .content-image-container {max-width: 33%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-721 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-722 .content-image-container {max-width: 20%;padding-bottom: 12px;}
+#sub-content-722 .content-image-thumb {width: 100%;max-width:200px;}
+
+#sub-content-731 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-731 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-732 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-732 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-741 .content-image-container {max-width: 45%;padding-bottom: 24px;}
+#sub-content-741 .content-image-thumb {width: 100%;max-width:450px;}
+
+#sub-content-742 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-742 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-743 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-743 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-744 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-744 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-745 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-745 .content-image-thumb {width: 100%;max-width:400px;}
+
+/* Black Arts Era */
+#sub-content-811 .content-image-container {max-width: 35%;padding-bottom: 12px;}
+#sub-content-811 .content-image-thumb {width: 100%;max-width:350px;}
+
+#sub-content-812 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-812 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-813 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-813 .content-image-thumb {width: 100%;max-width:250px;}
+#sub-content-813 audio {max-width: 250px;}
+#sub-content-813 .col1 {max-width: 30%; display: inline-block; position: relative; vertical-align:top;}
+#sub-content-813 .col2 {max-width: 30%; display: inline-block; position: relative; left: 24px;vertical-align:top;}
+#sub-content-813 .col3 {max-width: 30%; display: inline-block; position: relative; left: 48px;vertical-align:top;}
+
+#sub-content-821 .content-image-container {max-width: 30%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-821 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-822 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-822 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-831 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-831 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-832 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-832 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-833 .content-image-container {max-width: 30%;padding-bottom: 24px;}
+#sub-content-833 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-834 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-834 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-835 .content-image-container {max-width: 35%;padding-bottom: 12px;}
+#sub-content-835 .content-image-thumb {width: 100%;max-width:350px;}
+
+/* Contemporary Period */
+#sub-content-911 .content-image-container {max-width: 35%;padding-bottom: 12px;}
+#sub-content-911 .content-image-thumb {width: 100%;max-width:350px;}
+
+#sub-content-912 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-912 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-913 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-913 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-914 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-914 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-915 .content-image-container {max-width: 45%;padding-bottom: 12px;}
+#sub-content-915 .content-image-thumb {width: 100%;max-width:450px;}
+
+#sub-content-921 .content-image-container {max-width: 30%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-921 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-922 .content-image-container {max-width: 25%;padding-bottom: 12px;}
+#sub-content-922 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-923 .content-image-container {max-width: 25%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-923 .content-image-thumb {width: 100%;max-width:250px;}
+
+#sub-content-924 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-924 .content-image-thumb {width: 100%;max-width:400px;}
+
+#sub-content-931 .content-image-container {max-width: 30%;padding-bottom: 12px;}
+#sub-content-931 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-932 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-932 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-933 .content-image-container {max-width: 30%;padding-bottom: 24px;}
+#sub-content-933 .content-image-thumb {width: 100%;max-width:300px;}
+
+#sub-content-934 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-934 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-935 .content-image-container {max-width: 50%;padding-bottom: 12px;}
+#sub-content-935 .content-image-thumb {width: 100%;max-width:500px;}
+
+#sub-content-936 .content-image-container {max-width: 27%;padding-bottom: 12px;}
+#sub-content-936 .content-image-thumb {width: 100%;max-width:270px;}
+
+#sub-content-941 .content-image-container {max-width: 25%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-941 .content-image-thumb {width: 100%;max-width:250px;}
+#sub-content-941 .in-content-image-container {max-width:250px;float: right;padding-right:6px;padding-left:12px;padding-bottom:48px;}
+
+#sub-content-942 .content-image-container {max-width: 33%;padding-bottom: 12px;}
+#sub-content-942 .content-image-thumb {width: 100%;max-width:330px;}
+
+#sub-content-943 .content-image-container {max-width: 33%;padding-bottom: 12px;margin-top: -12px;}
+#sub-content-943 .content-image-thumb {width: 100%;max-width:330px;}
+#sub-content-943 .in-content-image-container{max-width:200px;float: right;padding-right:6px;padding-left:12px;padding-bottom:48px;}
+
+#sub-content-944 .content-image-container {max-width: 40%;padding-bottom: 12px;}
+#sub-content-944 .content-image-thumb {width: 100%;max-width:400px;}
+#sub-content-944 .in-content-image-container{max-width:300px;float: right;padding-right:6px;padding-left:12px;}
+
+.source {font-size: 1em;}
+.source ul {list-style-type: none;text-indent: 0px;margin-left: 0;}
+.source ul li{list-style-type: none;text-indent: 0px;margin-left: 0x;}
+
+.caption {margin-top:0.8em;font-size:0.8em;}
+.caption-av {margin-top:0.8em;font-size:1em;}
+
+.sub-content-link {text-decoration: underline}
+.sub-content-link:hover {text-decoration:none}
+
+p.works {color: #333; font-weight: bold;font-size:1em;line-height: 12px;margin-bottom:6px;}
+ul.works {color: #333;font-size:1em;margin-top:6px;}
+
+p.actions {color: #333; font-weight: bold;font-size:1em; line-height: 12px;margin-bottom:6px;font-style:italic;}
+ul.actions {color: #333;font-size:1em;margin-top:6px;}
+
+audio {max-width:200px;}
+
+.citation {
+	font-style: italic; 
+	font-size: 1em;
+	color: #636363;
+	background-color: #f1f1f1;
+	padding: 12px;
+	margin-bottom:6px;
+	border-radius: 3px;
+	border: 2px solid #00b1d1;
+	border-top: 12px solid #00b1d1;
+	box-shadow: -2px 2px 12px #333;
+}
+
+.show-on-small-screens {position: absolute; left:-9999px}
+
+.ext_link_icon {
+	float: left;
+	width: 24px;
+	height:24px;
+	background: url(../img/lien-externe.png) no-repeat 0px 0;
+	margin-right: 6px;
+}
+.ext_link_icon:hover {
+	background: url(../img/lien-externe.png) no-repeat -25px 0;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+/* = Site Map
+-------------------------------------------------------------- */
+
+#sitemap ul li{font-size:1em;font-weight: bold;}
+#sitemap ul li ul li {font-size:0.875em;line-height: 24px;font-weight: normal;}
+#sitemap ul li ul li ul li {font-size:0.75em;line-height: 10px;font-weight: normal;color: #363636;}
+
+.sitemap-period {margin-bottom: 12px;}
+
+/* = Tooltips
+-------------------------------------------------------------- */
+.tooltip, .tooltip2, .tooltip_over {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  font-size:0.75em;
+}
+.tooltip span,
+.tooltip2 span {
+  visibility: hidden;
+  position: absolute; 
+  width: 150px;
+  text-align: center;;
+  top: 47px;
+  padding: 10px;
+  opacity: 0.9;                   
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.74), 0 1px 0 rgba(255,255,255,.85) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.8) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.8) inset;  
+  text-shadow: 0 1px 0 rgba(0,0,255,.7);
+  z-index: 1001;
+  font-size: 12px;
+}
+.tooltip span {background-color: #00b1d1; color: #fff; }
+.tooltip2 span {background-color: #333; color: #fff; }
+.tooltip:hover,
+.tooltip2:hover{border: 0; /* IE6 fix */}
+.tooltip:hover span,
+.tooltip2:hover span{visibility: visible;}
+.tooltip span:after,
+.tooltip2 span:after {
+  content: "";
+  position: absolute;
+  z-index: 2001;
+  top: -43px;
+  left: 42%;
+  margin-left: -8px;  
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;        
+  border-bottom: 0;
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -moz-transform:rotate(180deg); /* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  -o-transform:rotate(180deg); /* Opera */ 
+}
+.tooltip span:after {border-top: 45px solid #00b1d1;}
+.tooltip2 span:after {border-top: 45px solid #333;}
+.tooltip span:before,
+.tooltip2 span:before {border-top-color: #000; bottom: -38px;} 
+
+/* = IE Specific (IE10 and IE11)
+-------------------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	
+	.timeline-btn {background-color: #fff;}
+	.timeline-btn:first-child span {margin-left:3px;}
+}
+
+/* = Mobile and smaller viewports
+-------------------------------------------------------------- */
+
+/* ipad portrait and smaller viewports */
+@media (max-width: 1024px) {
+	
+	.breadcrumb {font-size: 1em}
+	.pagination .pagination-link {font-size:1.375em;margin-right:18px;}
+	.content-section-wrapper li {padding-top:3px;padding-bottom:6px;}
+	
+}
+@media (max-width: 960px)  {
+
+	.timeline-btn[rel='black-arts-era'] .inner-btn {margin-left: -310%;}
+
+	.timeline-btn[rel='contemporary-period'] {width: 4.5%;}
+	.timeline-btn[rel='contemporary-period'] .inner-btn {margin-left:-90%;}
+	.timeline-btn[rel='contemporary-period'] .inner-btn span {display: block;max-width:110px;line-height:10px;}
+	
+}
+@media (max-width: 767px) {
+	
+	.hide-on-small-screens {position: absolute; left:-9999px}
+	.show-on-small-screens {position: relative; left:0px}
+	.timeline-btn[rel='black-arts-era'] .inner-btn {margin-left: -350%;}
+	
+}
+@media (max-width: 496px) { /* was 650px */
+	
+	#site-wrapper {max-width:300px !important;}
+	header {border: 0;}
+	
+	/* mobile nav here */
+	nav .navL1 {display: none;}
+	nav .is-hidden {display: block;}
+	
+	nav {width: 100%;text-align: center;}
+	nav select{
+		width: 300px;
+		height:48px;
+		color: #fff;
+		background: #cce1e4; /* Old browsers */
+		background: -moz-linear-gradient(top,  #cce1e4 0%, #3e7e95 13%, #3f7f95 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cce1e4), color-stop(13%,#3e7e95), color-stop(100%,#3f7f95)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #cce1e4 0%,#3e7e95 13%,#3f7f95 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cce1e4', endColorstr='#3f7f95',GradientType=0 );				border:3px solid #fff;
+	}
+	
+	.navL2 {
+		background-color: #f4f4f4;
+		color: #333;
+		height:36px;
+		font-size:12px;
+		font-weight:normal;
+		padding-top: 0px;
+		padding-left:18px;
+		border-radius: 0;
+	}
+	.navL2.active {background-color: #f4f4f4 !important;color: #000 !important;}
+	
+	.pre-colonial-africa .navL2.active {border-left: 6px solid #1cb1cf;padding-left:13px;background: none;}
+	.transatlantic-slave-trade .navL2.active {border-left: 6px solid #9caa25;padding-left:13px;background: none;}
+	.antebellum-era .navL2.active {border-left: 6px solid #4b4b4b;padding-left:13px;background: none;}
+	.reconstruction-period .navL2.active {border-left: 6px solid #cf19ae;padding-left:13px;background: none;}
+	.new-negro-renaissance .navL2.active {border-left: 6px solid #fd7121;padding-left:13px;background: none;}
+	.harlem-renaissance .navL2.active {border-left: 6px solid #4fa921;padding-left:13px;background: none;}
+	.civil-rights-movement .navL2.active {border-left: 6px solid #a91d16;padding-left:13px;background: none;}
+	.black-arts-era .navL2.active {border-left: 6px solid #e38f29;padding-left:13px;background: none;}
+	.contemporary-period .navL2.active {border-left: 6px solid #6b1ba8;padding-left:13px;background: none;}
+	
+	.pre-colonial-africa .navL2:before {
+		content: "";
+		display: none;
+		width:18px;
+		height:36px;
+		background-color: #1cb1cf;
+		margin-right: 12px;
+	}
+
+	header h2 {margin-bottom: 0}
+	
+	#introduction {margin-top: 24px;}
+	#sitemap {margin-top: 60px;}
+
+	.intro-image-container {float:none;	width: 100%;margin: 0 auto !important;}
+	.intro-image-container img {float:none;min-width: none;margin: 0 auto !important;}
+	.intro-image-container.left {float:none;padding-right: none;margin: 0 auto !important;}
+	.intro-image-container.right {float:none;padding-left: none;}
+	
+	#timeline-container {
+		height: auto;
+		position: static !important;
+		background: none;
+		margin-top: 24px;
+		border-bottom:0;
+	}
+	
+	.timeline-btn {
+  		position:static;
+  		min-width: 100%;
+		background: #f1f1f1;;
+		float: none;
+		clear: both;;
+		padding: 0px;
+		margin-top:0px;
+		max-height:50px;
+		font-size: 16px;
+		border-bottom:1px solid #fff;
+	}
+	.timeline-btn .inner-btn {
+		position:static;
+		min-width: 100%;
+		padding:0px;
+		display: block;
+		background-color: transparent;
+		border:0;
+	}
+	.inner-btn.active {background: none;color: #000;}
+	
+	.timeline-btn span {padding:12px;padding-top:9px;display: block;background-color: transparent;}
+	
+	.timeline-btn[rel='pre-colonial-africa'] {min-height:0;}
+	.timeline-btn[rel='pre-colonial-africa'] .inner-btn {top: 0;margin-left:0}
+	
+	.transatlantic-slave-trade .navL2.active {background: none}
+		
+	.timeline-btn[rel='transatlantic-slave-trade'] {min-height:0;}
+	.timeline-btn[rel='transatlantic-slave-trade'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='antebellum-era'] {min-height:0;}
+	.timeline-btn[rel='antebellum-era'] .inner-btn {top: 0;margin-left: 0;}
+		
+	.timeline-btn[rel='reconstruction-period'] {min-height:0;}
+	.timeline-btn[rel='reconstruction-period'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='new-negro-renaissance'] {min-height:0;}
+	.timeline-btn[rel='new-negro-renaissance'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='harlem-renaissance'] {min-height:0;}
+	.timeline-btn[rel='harlem-renaissance'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='civil-rights-movement'] {min-height:0;}
+	.timeline-btn[rel='civil-rights-movement'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='black-arts-era'] {min-height:0;}
+	.timeline-btn[rel='black-arts-era'] .inner-btn {top: 0;margin-left:0}
+		
+	.timeline-btn[rel='contemporary-period'] {width: 4.5%;min-height:0;/* padding-bottom: 58px; */}
+	.timeline-btn[rel='contemporary-period'] .inner-btn {margin-left:0;background-color: #f1f1f1;}
+	.timeline-btn[rel='contemporary-period'] .inner-btn span {display: block;max-width:none;line-height:16px;}
+			
+	#historical-timeline-wrapper,
+	#literary-timeline-wrapper,
+	#literary-timeline-title,
+	#historical-timeline-title,
+	.start_year,
+	.end_year {display: none}
+	
+	.mobile-content {font-size:14px;}
+	.mobile-content .navL2 {display: inline-block;position: static;width: 100%;}
+  	
+	#content-container {display: none;}
+  	.content-section-wrapper {
+		position: relative;
+		top: 0px;
+		box-sizing: border-box; 
+		padding-left: 12px;
+		padding-right: 8%;
+		text-align: left;
+	}
+	
+	.navL2 {border-bottom: 0 !important;}
+
+	.pre-colonial-africa .content-section-wrapper {border-left: 6px solid #1cb1cf;border-right: 1px solid #1cb1cf;}
+	.transatlantic-slave-trade .content-section-wrapper {border-left: 6px solid #9caa25;border-right: 1px solid #9caa25;}
+	.antebellum-era .content-section-wrapper {border-left: 6px solid #4b4b4b;border-right: 1px solid #4b4b4b;}
+	.reconstruction-period .content-section-wrapper {border-left: 6px solid #cf19ae;border-right: 1px solid #cf19ae;}
+	.new-negro-renaissance .content-section-wrapper {border-left: 6px solid #fd7121;border-right: 1px solid #fd7121;}
+	.harlem-renaissance .content-section-wrapper {border-left: 6px solid #4fa921;border-right: 1px solid #4fa921;}
+	.civil-rights-movement .content-section-wrapper {border-left: 6px solid #a91d16;border-right: 1px solid #a91d16;}
+	.black-arts-era .content-section-wrapper {border-left: 6px solid #e38f29;border-right: 1px solid #e38f29;}
+	.contemporary-period .content-section-wrapper {border-left: 6px solid #6b1ba8;border-right: 1px solid #6b1ba8;}
+
+	/* sub content txt and image containers */
+	.breadcrumb {margin-top: 12px;font-size: 12px;}
+	
+	.content-text-container, 
+	.content-text-container.left,
+	.content-text-container.right {margin:0;padding-right: 12px;padding-left: 12px;padding-bottom:12px;}
+
+	.content-image-container,
+	.in-content-image-container,
+	.content-image-container.left {float:none;padding-right: 12px;padding-left: 12px;margin-bottom: 12px;}
+	.content-image-container.right {float:none;padding-right: 12px;margin-left: 0px;margin-bottom: 12px;}
+	
+	.content-image-thumb {max-width: 300px;}
+	
+	/*  processing all image in sub-content to hold in mobile viewport */
+	div[id^='sub-content-'] .content-image-container, div[id*="sub-content-"] .content-image-container {max-width: 100% !important;text-align: center !important; padding-bottom: 12px !important;}
+	div[id^="sub-content-"] .content-image-thumb {width: 100% !important;max-width:none !important;}
+	div[id^="sub-content-"] .in-content-image-container {max-width:none !important;float: none !important;padding-bottom: 12px !important;padding-left: 0px !important;}
+	
+	/* 2 cols reformatting to single col */
+	#sub-content-622 .col1 {max-width: 100%; display: block; position: relative; top : 0px;}
+	#sub-content-622 .col2 {max-width: 100%; display: block; position: relative; left: 0px;}
+	
+	#sub-content-813 .col1 {max-width: 100%; display: block; position: relative; vertical-align:top;}
+	#sub-content-813 .col2 {max-width: 100%; display: block; position: relative; left: 0px;vertical-align:top;}
+	#sub-content-813 .col3 {max-width: 100%; display: block; position: relative; left: 0px;vertical-align:top;}
+	
+	audio {max-width: 200px !important;}
+
+	.ext_link_icon {display: inline-block;float: none;}
+	
+	p.works, 
+	ul.works,
+	p.actions,
+	ul.actions {font-size:14px !important;}
+}

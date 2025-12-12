@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!--
+ Module: HTML
+ Description: HTML C@D-Timeline
+ Auteur: Thundra
+ Version: 1.0.0
+ Dernière modification: nov. 2015
+-->
+<html lang="fr">
+<head>
+
+    <title>Cegep@Distance - Timeline</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="description" content="Cegep@Distance - Prototype">
+    <meta name="dcterms.description" content="Cegep@Distance - Prototype" />
+    <meta name="keywords" content="" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="Cegep@Distance - Timeline" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/chronos.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+
+    <!-- Modernizr -->
+    <script src="js/vendor/modernizr.min.js"></script>
+    <script src="js/vendor/detectizr.min.js"></script>
+    
+    <!-- CAD Scorm adaptif -->
+    <script src="js/iframeResizer.contentWindow.min.js"></script>
+
+</head>
+<body>
+
+    <div id="site-wrapper"> 
+	    
+	    <header>
+
+		   <nav>
+		   		<ul class="navL1">
+			   		<li class="active">
+			   			<a href="introduction">Introduction</a>
+			   		</li>
+			   		<li class="hide-on-small-screens">
+			   			<a href="literary-themes">Literary Themes: Introduction to African American Literature</a>
+			   		</li>
+			   		<li class="show-on-small-screens">
+			   			<a href="literary-themes">Literary Themes</a>
+			   		</li>
+			   		<li>
+			   			<a href="sitemap">Site Map</a>
+			   		</li>
+		   		</ul>
+		   		
+		   		<div class="navL1-mobile is-hidden">
+			   		
+			   		<select>
+				   		
+				   		<option value="introduction">Introduction</option>
+				   		<option value="literary-themes">Literary Themes</option>
+				   		<option value="sitemap">Site Map</option>
+				   		
+			   		</select>
+			   		
+		   		</div>
+		   </nav>
+
+	    </header>
+
+	    <main>
+		    
+		    <div id="introduction" class="L1-section">
+
+				<div class="intro-image-container left">
+		
+					<a class="fancybox" href="content/images/slave-dance-and-music.jpg"><img class="content-image-thumb" src="content/images/slave-dance-and-music.jpg" alt="Slaves dance and music" /></a>
+					
+					<br />
+		
+					<div class="caption">
+				
+						<em>The Old Plantation</em>, 1800. HIP / Art Resource, NY
+				
+					</div>
+
+				</div>
+			
+				<div class="content-text-container width-350 wrapper">
+				    
+					<p>Welcome! In the course <em>LITERARY THEMES: Introduction to African American Literature</em>, you will be analyzing literature from a historical perspective. You will discover how history affected African American writers. While your Workbook will help you with the analysis of literary works and their themes, this archive will acquaint you with the historical aspect of the course.</p>
+
+					<p>Before you move on, you should keep in mind that this is not a history course. Interesting things have happened in African American history, but the emphasis of this course is the literature. Think of this archive as a guide that helps you to place the works of African American writers in their proper historical context. Feel free to explore the cards and take advantage of the media associated with them.</p>
+
+					<p>We hope that this archive will enhance your learning experience and that it will contribute to your appreciation of African American literature.</p>
+    
+	    		</div><!--/.content-text-container-->
+	    		
+		    </div><!--/.L1-section-->
+	    	
+	    	<div id="literary-themes" class="L1-section is-hidden">
+	    
+			    <section id="timeline-container">
+				     
+					    <div class="start_year">←1400</div>
+					    <div class="end_year">2050→</div>
+					    
+					    <div id="historical-timeline-title">Historical Periods</div>
+					     
+					    <div id="historical-timeline-wrapper">
+						    
+						    <div id="htl-zone1" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone2" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone3" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone4" class="timeline-zone"></div>
+						   
+						    <div id="htl-zone5" class="timeline-zone"></div>
+						   
+						    <div id="htl-zone6" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone7" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone8" class="timeline-zone"></div>
+						    
+						    <div id="htl-zone9" class="timeline-zone"></div>
+						    
+					    </div>
+					    
+<!-- 					    <div id="probe001" style="position:absolute;top:0;left:0;width:40px;height:20px;border:1px solid #f90;font-size:12px;"></div> -->
+					    
+					    <div id="literary-timeline-title">Literary Movements</div>
+					    <div id="literary-timeline-wrapper">
+						    
+						    <div id="ltl-zone1" class="timeline-zone tooltip2">
+							    <span>
+									Early Nationalism<br />
+									[ 1775 - 1827 ]
+								</span>
+						    </div>
+						    
+						    <div id="ltl-zone2" class="timeline-zone tooltip2">
+							    <span>
+									Romanticism / Transcendentalism<br />
+									[ 1828 - 1864 ]
+								</span>
+						    </div>
+						    
+						    <div id="ltl-zone3" class="timeline-zone tooltip2">
+							    <span>
+									Realism / Naturalism<br />
+									[ 1865 - 1899 ]
+								</span>
+						    </div>
+						    
+						    <div id="ltl-zone4" class="timeline-zone tooltip2">
+							    <span>
+									Modernism<br />
+									[ 1900 - 1959 ]
+								</span>
+						    </div>
+						   
+						    <div id="ltl-zone5" class="timeline-zone tooltip2" >
+							     <span>
+									Post Modernism<br />
+									[ 1960 - * ]
+								</span>
+						    </div>
+						   
+					    </div>
+	
+					    <div rel="pre-colonial-africa" class="timeline-btn">
+						    <div class="inner-btn active">
+						    	<span><strong>Pre-colonial Africa</strong><br />[ * - 1501]</span>
+						    </div>
+					    </div>
+					     
+					    <div id="pre-colonial-africa" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="transatlantic-slave-trade" class="timeline-btn">
+						    <div class="inner-btn">
+						    	<span><strong>Transatlantic Slave Trade</strong><br />[ 1502 - 1618 ]</span>
+						    </div>
+					    </div>
+					     
+					    <div id="transatlantic-slave-trade" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="antebellum-era" class="timeline-btn">
+						    <div class="inner-btn">
+						    	<span><strong>Antebellum Era</strong><br />[ 1619 - 1864 ]</span>
+						    </div>
+					    </div>
+					    
+					    <div id="antebellum-era" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="reconstruction-period" class="timeline-btn">
+							<div class="inner-btn">
+								<span><strong>Reconstruction Period</strong><br />[ 1865 - 1876 ]</span>
+							</div>
+					    </div>
+					    
+					    <div id="reconstruction-period" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="new-negro-renaissance" class="timeline-btn">
+						   	<div class="inner-btn">
+						   		<span><strong>New Negro Renaissance</strong><br />[ 1877 - 1918 ]</span>
+						   	</div>
+					    </div>
+					    
+					    <div id="new-negro-renaissance" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="harlem-renaissance" class="timeline-btn">
+							<div class="inner-btn">
+								<span><strong>Harlem Renaissance</strong><br />[ 1919 - 1939 ]</span>
+							</div>
+					    </div>
+					    
+					    <div id="harlem-renaissance" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="civil-rights-movement" class="timeline-btn">
+							<div class="inner-btn">
+								<span><strong>Civil Rights Movement</strong><br />[ 1940 - 1959 ]</span>
+							</div>
+					    </div>
+					    
+					    <div id="civil-rights-movement" class="mobile-content is-hidden"></div>
+					     
+					    <div rel="black-arts-era" class="timeline-btn">
+							<div class="inner-btn">
+								<span><strong>Black Arts Era</strong><br />[ 1960 - 1974 ]</span>
+							</div>
+					    </div>
+					    
+					    <div id="black-arts-era" class="mobile-content is-hidden"></div>
+					     
+						<div rel="contemporary-period" class="timeline-btn">
+							<div class="inner-btn">
+								<span><strong>Contemporary Period</strong><br />[ 1975 - * ]</span>
+							</div>
+					    </div>
+					    
+					    <div id="contemporary-period" class="mobile-content is-hidden"></div>
+				    
+			    </section>
+	
+			    <section id="content-container">
+	
+					<div class="main-content"></div>
+					
+			    </section>
+			    
+	    	</div>
+	    	
+	    	<div id="sitemap" class="L1-section is-hidden">
+		    
+		    	<ul>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="pre-colonial-africa" href="trans-saharan-slave-trade-1">
+							Pre-Colonial Africa
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="pre-colonial-africa" href="trans-saharan-slave-trade-1">
+									Trans-Saharan Slave Trade
+								</a>
+								<ul>
+									<li>Wars in Northwest Africa</li>
+									<li>Trans-Saharan Trade Network</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="pre-colonial-africa" href="historical-context-1">
+									Historical Context
+								</a>
+								<ul>
+									<li>The Sahara Desert and Ancient Egypt</li>
+									<li>Egyptian Kingdoms</li>
+									<li>Nubia</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="transatlantic-slave-trade" href="historical-context-2">
+							Transatlantic Slave Trade
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="transatlantic-slave-trade" href="historical-context-2">
+									Historical Context
+								</a>
+								<ul>
+									<li>Slave Trade in the Mediterranean</li> 
+									<li>Developing the New World</li> 
+									<li>Treaty of Tordesillas</li> 
+									<li>The Process of Enslavement</li> 
+				
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="antebellum-era" href="life-as-a-slave-3">
+							Antebellum Era
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="antebellum-era" href="life-as-a-slave-3">
+									Life as a Slave
+								</a>
+								<ul>
+									<li>Slaves in America: Living Conditions</li>
+									<li>Slaves in America: Rebellion</li>
+									<li>Slaves in America: Family and Community</li>
+									<li>Slaves in America: The Language</li>
+									<li>Slaves in America: Religion</li>
+									<li>The Oral Tradition</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="antebellum-era" href="works-3">
+									Work
+								</a>
+								<ul>
+									<li>Spirituals</li>
+									<li>Works of Phillis Wheatley</li>
+									<li>Works of Frederick Douglass</li>
+									<li>"Arn't I a Woman?" A Speech by Sojourner Truth</li>
+								
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="antebellum-era" href="people-3">
+									People
+								</a>
+								<ul>
+									<li>Olaudah Equiano</li>
+									<li>Phillis Wheatley </li>
+									<li>Sojourner Truth</li>
+									<li>Frederick Douglass</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="antebellum-era" href="historical-context-3">
+									Historical Context
+								</a>
+								<ul>
+									<li>American Revolution</li>
+									<li>United States' Declaration of Independence</li>
+									<li>Antebellum Era: Historical Events</li>
+									<li>American Civil War</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="reconstruction-period" href="challenges-4">
+							Reconstruction Period
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="reconstruction-period" href="challenges-4">
+									Challenges
+								</a>
+								<ul>
+									<li>Reconstruction Period: Racism </li>
+									<li>Reconstruction Period: Employment</li>
+									<li>Reconstruction Period: Education</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="reconstruction-period" href="works-4">
+									Works
+								</a>
+								<ul>
+									<li>Works of Charles W. Chesnutt</li>
+									<li>Works of Booker T. Washington</li>
+									<li>Gospel</li>
+									<li>Works of Frederick Douglass</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="reconstruction-period" href="people-4">
+									People
+								</a>
+							
+								<ul>
+									<li>Booker T. Washington</li>
+									<li>Charles W. Chesnutt</li>
+									<li>Frederick Douglass</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="reconstruction-period" href="historical-context-4">
+									Historical Context
+								</a>
+								<ul>
+									<li>Reconstruction Period: Historical Events</li>
+									<li>American Civil War</li>
+									<li>Emancipation Proclamation</li>
+									<li>Ku Klux Klan</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="new-negro-renaissance" href="works-5">
+							New Negro Renaissance
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="new-negro-renaissance" href="works-5">
+									Works
+								</a>
+								<ul>
+									<li>Works of Charles W. Chesnutt</li>
+									<li>Works of Frederick Douglass</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="new-negro-renaissance" href="people-5">
+									People
+								</a>
+								<ul>
+									<li>Charles W. Chesnutt</li>
+									<li>Anna Julia Cooper</li>
+									<li>W.E.B. Du Bois</li>
+									<li>Frederick Douglass</li>
+									<li>Booker T. Washington</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="new-negro-renaissance" href="historical-context-5">
+									Historical Context
+								</a>
+								<ul>
+									<li>Jim Crow</li>
+									<li>Black Stereotypes</li>
+									<li>World War I</li>
+									<li>National Association for the Advancement of Colored People (NAACP)</li>
+									<li>New Negro Renaissance: A Cultural Rebirth</li>
+									<li>The Great Migration</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="harlem-renaissance" href="challenges-6">
+							Harlem Renaissance
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="harlem-renaissance" href="challenges-6">
+									Challenges
+								</a>
+								<ul>
+									<li>Harlem Renaissance: Politics</li>
+									<li>Harlem Renaissance: Employment</li>
+									<li>Harlem Renaissance: Housing</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="harlem-renaissance" href="works-6">
+									Works
+								</a>
+								<ul>
+									<li>Works of Marcus Garvey</li>
+									<li>Works of Langston Hughes</li>
+									<li>Blues and Jazz</li>
+									<li>Literary Movements</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="harlem-renaissance" href="people-6">
+									People
+								</a>
+								<ul>
+									<li>Marcus Garvey</li>
+									<li>Langston Hughes</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="harlem-renaissance" href="historical-context-6">
+									Historical Context
+								</a>
+								<ul>
+									<li>The Great Depression</li>
+									<li>The Spirit of Harlem</li>
+									<li>White Patronage</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="civil-rights-movement" href="challenges-7">
+							Civil Rights Movement
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="civil-rights-movement" href="challenges-7">
+									Challenges
+								</a>
+								<ul>
+									<li>Civil Rights Movement: Employment</li>
+									<li>Civil Rights Movement: Housing</li>
+									<li>Civil Rights Movement: Education</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="civil-rights-movement" href="works-7">
+									Works
+								</a>
+								<ul>
+									<li>Works of Martin Luther King, Jr.</li>
+									<li>Works of James Baldwin</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="civil-rights-movement" href="people-7">
+									People
+								</a>
+								<ul>
+									<li>Martin Luther King, Jr.</li>
+									<li>James Baldwin</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="civil-rights-movement" href="historical-context-7">
+									Historical Context
+								</a>
+								<ul>
+									<li>Civil Rights Movement: Legal Actions</li>
+									<li>Civil Rights Movement: Non-violent Direct Action</li>
+									<li>Civil Rights Movement: Political Actions</li>
+									<li>March on Washington for Jobs and Freedom</li>
+									<li>World War II</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="black-arts-era" href="works-8">
+							Black Arts Era
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="black-arts-era" href="works-8">
+									Works
+								</a>
+								<ul>
+									<li>Works by Malcolm X</li>
+									<li>R&B, Soul Music, and Motown Records</li>
+									<li>Works of Sonia Sanchez</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="black-arts-era" href="people-8">
+									People
+								</a>
+								<ul>
+									<li>Malcolm X</li>
+									<li>Sonia Sanchez</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="black-arts-era" href="historical-context-8">
+									Historical Context
+								</a>
+								<ul>
+									<li>Black Power Movement</li>
+									<li>Black Power: Violence, Civil Disobedience, and Politics</li>
+									<li>Black Panther Party</li>
+									<li>Black Power in the Sports World</li>
+									<li>Black is Beautiful</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sitemap-period">
+						<a class="sitemap-link" rel="contemporary-period" href="challenges-9">
+							Contemporary Period
+						</a>
+						<ul>
+							<li>
+								<a class="sitemap-link" rel="contemporary-period" href="challenges-9">
+									Challenges
+								</a>
+								<ul>
+									<li>Contemporary Period: Disparities in Criminal Justice</li>
+									<li>Contemporary Period: Employment</li>
+									<li>Contemporary Period: Housing</li>
+									<li>Contemporary Period: Racism</li>
+									<li>Contemporary Period: Community Fragmentation</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="contemporary-period" href="works-9">
+									Works
+								</a>
+								<ul>
+									<li>Works of Maya Angelou</li>
+									<li>Works of Walter Mosley</li>
+									<li>Works of Alice Walker</li>
+									<li>Rap and Hip Hop</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="contemporary-period" href="people-9">
+									People
+								</a>
+								<ul>
+									<li>Maya Angelou</li>
+									<li>Grandmaster Flash and The Furious Five</li>
+									<li>Walter Mosley</li>
+									<li>Barak Obama</li>
+									<li>Public Enemy</li>
+									<li>Alice Walker</li>
+								</ul>
+							</li>
+							<li>
+								<a class="sitemap-link" rel="contemporary-period" href="historical-context-9">
+									Historical Context
+								</a>
+								<ul>
+									<li>Contemporary Period: African Americans in Politics</li>
+									<li>Contemporary Period: African Americans in Sports</li>
+									<li>Contemporary Period: African Americans in Culture and Entertainment</li>
+									<li>Contemporary Activism</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+		    
+	    	</div>
+		    
+	    </main>
+	    
+	   <footer>© <a href="http://cegepadistance.ca/" title="Tous droits de traduction et d’adaptation, en totalité ou en partie, réservés pour tous pays. Aucun extrait de ce document protégé par les présents droits d’auteur ne peut être reproduit ni utilisé sous quelque forme ou par quelque moyen que ce soit, mécanique ou électronique, y compris la microreproduction, la photocopie, l’enregistrement ou un système de stockage et de recherche des données, sans l’autorisation écrite d’une personne dument autorisée du Cégep à distance."target="_blank">Cégep à distance</a>, 2015.</footer>
+	   
+    </div><!-- /.site-wrapper-->
+
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/chronos.js"></script>
+    
+</body>
+</html>
